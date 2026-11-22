@@ -47,9 +47,10 @@ the gap [p_{jn}, p_{jn+1}) that starts at the prime of index jn. So a(n) is the 
 multiples of n, below n·p_n, that fall in one of those gaps. There are about n/2 gaps to
 look at, each of length about log(n²) ≈ 2 log n, so the expected number of hits is about
 p_n/n ≈ log n + log log n − 1, and the chance of none is about e^(−p_n/n). Summed over n
-this diverges, slowly: about one n per decade should fail. For n ≤ 10^5 the number of n
-with exactly one, two or three such k is what this model predicts (31, 104, 335 against
-25, 103, 315), and it predicts 0.48 failures between 10^5 and 10^6. There is one.
+this diverges, slowly: between a half and one n per decade should fail. For n ≤ 10^5 the
+number of n with exactly one, two or three such k is what this model predicts (31, 104, 335
+against 25, 103, 315). It predicts 3.7 failures for 10 ≤ n ≤ 10^5, where there are none,
+and 0.48 between 10^5 and 10^6, where there is one.
 
 `fast22.c` walks through all primes below 1.55·10^13 once, in parallel,
 and counts the hits for every n ≤ 10^6 together. It took 88 minutes on four cores.
