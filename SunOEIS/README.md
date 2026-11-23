@@ -69,8 +69,8 @@ every case with a prime found for each n:
 
 | OEIS entry | Expression | Sun's table | Scanned with no failure |
 | --- | --- | --- | --- |
-| A234347 | 3^k + 3^(φ(n−k)/2) − 1 | n ≤ 3000 | to n = 15000 |
-| A234337 | 4^k + 2^φ(n−k) − 1 | n ≤ 4000 | to n = 10000 |
+| A234347 | 3^k + 3^(φ(n−k)/2) − 1 | n ≤ 3000 | to n = 21000 |
+| A234337 | 4^k + 2^φ(n−k) − 1 | n ≤ 4000 | to n = 17000 |
 | A234344 | 2^(φ(k)/2) + 3^(φ(n−k)/2) | n ≤ 7000 | to n = 35000 |
 | A234309 | 2^φ(k) + 2^φ(n−k) − 1 | n ≤ 8000 | to n = 30000 |
 
