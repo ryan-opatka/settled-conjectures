@@ -1,0 +1,11 @@
+n = 37581: 37576 values of k have both exponents integral; 37042 distinct exponent pairs; largest number has about 29776 bits
+  4000 tested [279s]
+  8000 tested [463s]
+  12000 tested [587s]
+  16000 tested [664s]
+  20000 tested [708s]
+  24000 tested [737s]
+  28000 tested [762s]
+  32000 tested [799s]
+  36000 tested [887s]
+RESULT n = 37581: exponent pairs giving a prime: [] -> a(n) = 0 [926s]

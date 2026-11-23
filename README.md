@@ -9,6 +9,7 @@ that the Lean 4 kernel has verified, or by computation.
 | Same paper, Conjecture 2.2(i). Also the conjecture in OEIS A237597. | False. It fails at n = 778368, and for no other n ≤ 10^6. | Computation, by two programs that share no code. Not a Lean proof. | [`Sun22/`](Sun22/README.md) |
 | Same paper, the conjecture in the remark after Conjecture 2.4. Also Conjecture (ii) of OEIS A237598. | False. It fails at n = 1471. | Computation, by three programs. Not a Lean proof. | [`Sun22/`](Sun22/README.md) |
 | Z.-W. Sun, the conjecture in OEIS A234361 (2013). | False. It fails at n = 27135, the smallest counterexample. | Computation, by two programs that share no code. Not a Lean proof. | [`SunOEIS/`](SunOEIS/README.md) |
+| Z.-W. Sun, the conjecture in OEIS A234344 (2013). | False. It fails at n = 37581, the smallest counterexample. | Computation, by two programs that share no code. Not a Lean proof. | [`SunOEIS/`](SunOEIS/README.md) |
 | Z.-W. Sun, Conjecture (ii) in OEIS A234451 (2013), in both of its forms. | False. The first form fails at n = 62191, the second at n = 83843. | Computation: every exponent that occurs was tested directly. Not a Lean proof. | [`SunOEIS/`](SunOEIS/README.md) |
 
 Checked further but not settled: Sun's 1680-conjecture (OEIS A280831) holds for every number

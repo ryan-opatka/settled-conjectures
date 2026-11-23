@@ -1,10 +1,11 @@
-# Sun's exponential conjectures in the OEIS: three that fail
+# Sun's exponential conjectures in the OEIS: four that fail
 
 Computations, not Lean proofs. No prize is attached to any of these.
 
 | OEIS entry | Sun's claim | Fails at |
 | --- | --- | --- |
 | A234361 | for n > 7 some 0 < k < n has 2^(φ(k)/2)·3^(φ(n−k)/4) + 1 prime | n = 27135, the smallest |
+| A234344 | for n > 5 some 0 < k < n has 2^(φ(k)/2) + 3^(φ(n−k)/2) prime | n = 37581, the smallest |
 | A234451 (ii), first form | for n > 25, n = k + m with 3·2^(φ(k)/2 + φ(m)/8) + 1 prime | n = 62191 |
 | A234451 (ii), second form | for n > 38, the same with φ(m)/12 | n = 83843 |
 
@@ -62,6 +63,18 @@ In Sun's table the average of a(n) is 9.6 in the last third and 10.3 in the midd
 sample of twelve n between 18000 and 22000 gave an average of 9.0. With an average near 9
 about one n in ten thousand should have none, so a failure near 27000 is what one expects.
 
+## A234344: another pair of exponentials
+
+Sun: a(n) = #{0 < k < n : 2^(φ(k)/2) + 3^(φ(n−k)/2) is prime} is positive for all n > 5. His
+table goes to n = 7000.
+
+**a(37581) = 0.** For n = 37581 = 3·12527 there are 37576 values of k for which both exponents
+are integers, giving 37042 distinct pairs and numbers of up to about 29776 bits. None is
+prime. Again two programs agree, `e1scan.py` and `indep_A234344.py` (SymPy and PARI), and both
+reproduce Sun's table where tested (n ≤ 400; n = 1000 and n = 6999). It is the smallest
+counterexample: the table has no zero for 5 < n ≤ 7000 and the scan found a prime for every n
+from 7001 to 37580.
+
 ## The rest of the family
 
 Same structure, same flat averages in Sun's tables (about 10 to 12). Ranges scanned so far, in
@@ -71,7 +84,6 @@ every case with a prime found for each n:
 | --- | --- | --- | --- |
 | A234347 | 3^k + 3^(φ(n−k)/2) − 1 | n ≤ 3000 | to n = 21000 |
 | A234337 | 4^k + 2^φ(n−k) − 1 | n ≤ 4000 | to n = 17000 |
-| A234344 | 2^(φ(k)/2) + 3^(φ(n−k)/2) | n ≤ 7000 | to n = 35000 |
 | A234309 | 2^φ(k) + 2^φ(n−k) − 1 | n ≤ 8000 | to n = 30000 |
 
 Two relatives were refuted earlier by others: A234399 at n = 5962 (J. Yuen, 2024) and A234360
