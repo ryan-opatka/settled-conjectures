@@ -84,7 +84,7 @@ every case with a prime found for each n:
 | --- | --- | --- | --- |
 | A234347 | 3^k + 3^(φ(n−k)/2) − 1 | n ≤ 3000 | to n = 21000 |
 | A234337 | 4^k + 2^φ(n−k) − 1 | n ≤ 4000 | to n = 17000 |
-| A234309 | 2^φ(k) + 2^φ(n−k) − 1 | n ≤ 8000 | to n = 30000 |
+| A234309 | 2^φ(k) + 2^φ(n−k) − 1 | n ≤ 8000 | to n = 34000 |
 
 Two relatives were refuted earlier by others: A234399 at n = 5962 (J. Yuen, 2024) and A234360
 at n = 1408 (T. Adamczewski, 2026).
