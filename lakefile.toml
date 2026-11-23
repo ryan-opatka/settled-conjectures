@@ -1,7 +1,7 @@
 name = "Sun46"
 version = "0.1.0"
 keywords = ["math"]
-defaultTargets = ["Sun46"]
+defaultTargets = ["Sun46", "SevenWords"]
 
 [leanOptions]
 pp.unicode.fun = true # pretty-prints `fun a ↦ b`
@@ -17,3 +17,6 @@ rev = "v4.36.0-rc2"
 
 [[lean_lib]]
 name = "Sun46"
+
+[[lean_lib]]
+name = "SevenWords"

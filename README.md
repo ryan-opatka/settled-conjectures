@@ -15,6 +15,9 @@ that the Lean 4 kernel has verified, or by computation.
 Checked further but not settled: Sun's 1680-conjecture (OEIS A280831) holds for every number
 below 10^10, a hundred times further than had been verified; see [`Sun1680/`](Sun1680/README.md).
 
+Also here, and not a settled conjecture: a small classification theorem for the `3n + d`
+maps, proved in Lean; see [`SevenWords/`](SevenWords/README.md) and the section below.
+
 ## Sun's Conjecture 4.6
 
 Let φ be Euler's totient function and q(m) the number of partitions of m into distinct
@@ -32,10 +35,20 @@ computation and its checks are described in [`Sun22/README.md`](Sun22/README.md)
 with a smaller counterexample (n = 1471) to a related conjecture stated in a remark of the
 paper, and the ranges in which some neighbouring conjectures were checked and held.
 
+## Seven forced words
+
+For odd d let T_d(n) = n/2 for even n and (3n + d)/2 for odd n, so that T_1 is the Collatz
+map. Record an orbit as a word in C (odd term) and F (even term). Which words occur in
+every orbit that stays above d, whatever d is? Exactly seven: C, F, CC, CF, FC, CCF, FCC.
+The same holds within single maps (d = 5, 13, 47, 59) and when d is restricted to be
+coprime to any given modulus. For 3n + 1 alone the seven were known (Monks, Monks, Monks and
+Monks, 2013); what may be new is the statement across all the maps at once, and it is a
+small result. It does not resolve any conjecture about 3n + 1, and
+[`SevenWords/README.md`](SevenWords/README.md) says exactly what it does and does not show.
+
 ## Build
 
-The Lean proof of the counterexample to Conjecture 4.6:
-
+The Lean proofs (the counterexample to Conjecture 4.6, and the seven forced words):
 
 Install [elan](https://github.com/leanprover/elan), then in this directory:
 
@@ -56,11 +69,14 @@ The build prints
 
 The proof takes about nine minutes on four cores, with a peak of about 7.5 GB of memory. The
 first run also spends a few minutes reading Mathlib's cache.
+To build only the seven forced words, which takes under a minute: `lake build SevenWords`.
 
 ## Layout
 
 - `Sun46/` — the Lean proof of the counterexample to Sun's Conjecture 4.6, and its write-up.
   `Data.lean`, `Table.lean` and `Chunks/` are generated; nothing in them is trusted.
+- `SevenWords/` — the Lean proofs of the seven forced words, their write-up, and
+  `check_words.py`, which repeats the finite checks with plain integers.
 - `Sun22/` — the computations for Conjecture 2.2(i) and its neighbours, and their write-up:
   C programs (OpenMP) and Python programs that need `primecountpy`, `gmpy2`, `numpy` and,
   for one of them, `python-flint`.
@@ -78,7 +94,7 @@ Apache License 2.0, see [`LICENSE`](LICENSE). This matches Lean and Mathlib.
 
 ## Provenance
 
-The counterexamples were found, and the proof and the programs written, by Claude, an AI
+The counterexamples were found, and the proofs and the programs written, by Claude, an AI
 model made by Anthropic, working with a human collaborator. The Lean kernel checks the proof
-of the first independently of both; the others rest on the computations described.
-Nothing here has been peer reviewed.
+of the first counterexample and the proofs in `SevenWords/` independently of both; the other
+counterexamples rest on the computations described. Nothing here has been peer reviewed.
