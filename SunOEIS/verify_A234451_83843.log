@@ -1,0 +1,12 @@
+3*2^e+1,/2,/12, n = 83843: 55569 values of k give an integer exponent; 21452 distinct exponents, from 1538 to 41897
+  2000 tested [455s]
+  4000 tested [732s]
+  6000 tested [919s]
+  8000 tested [1039s]
+  10000 tested [1114s]
+  12000 tested [1165s]
+  14000 tested [1199s]
+  16000 tested [1218s]
+  18000 tested [1228s]
+  20000 tested [1234s]
+RESULT 3*2^e+1,/2,/12, n = 83843: exponents with f(e) prime: []  ->  a(n) = 0  [1235s]

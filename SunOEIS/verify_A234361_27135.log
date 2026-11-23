@@ -1,0 +1,8 @@
+n = 27135: 24770 values of k have both exponents integral; 24327 distinct exponent pairs; largest number has about 13565 bits
+  4000 tested [18s]
+  8000 tested [33s]
+  12000 tested [47s]
+  16000 tested [61s]
+  20000 tested [80s]
+  24000 tested [128s]
+RESULT n = 27135: exponent pairs giving a prime: [] -> a(n) = 0 [134s]
